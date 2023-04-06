@@ -14,8 +14,17 @@ function MainContent() {
   const [rewards, setRewards] = useState([...rewardData.reward]);
   const [contentBookmark, setContentBookmark] = useState('Bookmark');
 
+  const noReward = {
+    heading: 'Pleadge with no reward',
+    description: 'Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.'
+  }
+
   function turnOnModal() {
-    const modal = document.getElementById('back-project-modal');
+    const overlay = document.getElementById('overlay');
+    const modal = document.getElementById('modal');
+    if (overlay) {
+      overlay.style.display = 'block';
+    }
     if (modal) {
       modal.style.display = 'block';
     }
@@ -82,12 +91,9 @@ function MainContent() {
         </p>
         {rewards.map((reward, i) => <Reward key={i} heading={reward.heading} description={reward.description} pledgeNumber={reward.pledgeNumber} stockNumber={reward.stockNumber}></Reward>)}
       </section>
-      
-      <div id='back-project-modal'>
-        <div id='overlay'></div>
-        <Modal rewards={rewards}></Modal>
-      </div>
-    </div>
+      <div id='overlay'></div>
+      <Modal rewards={[noReward, ...rewards]}></Modal>
+  </div>
   )
 }
 
