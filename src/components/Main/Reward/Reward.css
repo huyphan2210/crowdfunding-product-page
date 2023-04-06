@@ -1,0 +1,57 @@
+.reward {
+    padding: 2rem;
+    border: solid #e0e0e0 0.1rem;
+    border-radius: 0.5rem;
+    margin-block: 2rem;
+}
+
+    .reward.disabled {
+        opacity: 0.5;
+    }
+
+    .reward:last-child {
+        margin-block-end: 0;
+    }
+
+    .reward hgroup, .stock-and-action{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+        .reward hgroup span {
+            color: var(--moderate-cyan);
+            font-weight: 500;
+        }
+        
+        .stock-and-action h1 {
+            display: flex;
+            align-items: center;
+        }
+
+            .stock-and-action h1 span {
+                color: var(--dark-gray);
+                font-weight: 400;
+                margin-left: 0.5rem;
+                font-size: 1rem;
+            }
+
+        .reward-btn {
+            color: white;
+            background-color: var(--moderate-cyan);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+        }
+            .reward-btn:hover {
+                background-color: var(--dark-cyan);
+            }
+            .reward-btn:disabled {
+                background-color: var(--dark-gray);
+                cursor: not-allowed;
+            }
+
+@media screen and (max-aspect-ratio: 1) and (max-width: 767px) {
+    .reward hgroup, .stock-and-action {
+        display: block;
+    }
+}
