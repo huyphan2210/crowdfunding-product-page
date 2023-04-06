@@ -1,0 +1,25 @@
+.checkbox {
+    position: absolute;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    border: solid 0.1rem #e0e0e0;
+    border-radius: 50%;
+    top: 2rem;
+    left: 2rem;
+}
+
+    .checkbox:hover {
+        cursor: pointer;
+    }
+
+    .checked {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 1rem;
+        aspect-ratio: 1;
+        background-color: var(--moderate-cyan);
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+    }
