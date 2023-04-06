@@ -26,12 +26,13 @@
       border-color: transparent;
       color: white;
       padding: 1rem;
-    } 
+    }
 
 @media screen and (max-aspect-ratio: 1) and (max-width: 767px) {
   #heading {
     position: relative;
     padding: 2rem 1rem;
+    z-index: 1;
   }
     #heading img:nth-child(2) {
       display: block;
@@ -54,5 +55,5 @@
       }
         #heading nav button:nth-child(2) {
           border-block: solid #ececec 0.1rem;
-        } 
+        }
 }
