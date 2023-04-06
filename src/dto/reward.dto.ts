@@ -1,7 +1,7 @@
 interface RewardDto {
     heading: string,
-    pledgeNumber: number,
-    stockNumber: number,
+    pledgeNumber?: number,
+    stockNumber?: number,
     description: string
 }
 
