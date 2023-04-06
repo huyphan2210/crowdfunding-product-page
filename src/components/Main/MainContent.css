@@ -1,52 +1,110 @@
-section {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    margin-block-end: 1rem;
+#content {
+    position: relative;
+    margin-block-start: 30vh;
+    width: 90%;
+    max-width: 1024px;
 }
 
-#intro {
-    text-align: center;
-}
-    #buttons {
-        margin-block-start: 2rem;
-        display: flex;
-        justify-content: space-between;
+    section {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        margin-block-end: 1rem;
     }
 
-    #buttons button {
-        position: relative;
-        padding: 1rem;
-        border-radius: 2rem;
-        border-width: 0;
-        font-weight: 500;
-
+    #intro {
+        text-align: center;
     }
-        #buttons button:first-child {
-            padding: 1rem 2rem;
-            background-color: var(--moderate-cyan);
-            color: white;
+        #buttons {
+            margin-block-start: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        #buttons button:first-child:hover {
-            background-color: var(--dark-cyan);
-        }
-
-        #buttons button:last-child {
+        #buttons button {
             position: relative;
-            padding: 1rem 1rem 1rem 4rem;
-            color: var(--dark-gray);
+            padding: 1rem;
+            border-radius: 2rem;
+            border-width: 0;
+            font-weight: 500;
+
+        }
+            #buttons button:first-child {
+                padding: 1rem 2rem;
+                background-color: var(--moderate-cyan);
+                color: white;
+            }
+
+            #buttons button:first-child:hover {
+                background-color: var(--dark-cyan);
+            }
+
+            #buttons button:last-child {
+                position: relative;
+                padding: 1rem 1rem 1rem 4rem;
+                color: var(--dark-gray);
+            }
+
+                #buttons button:last-child img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                }
+
+                #buttons button:last-child img:nth-child(2) {
+                    display: none;
+                }
+
+        #statistic {
+            display: grid;
+            grid-template-columns: auto auto auto;
         }
 
-            #buttons button:last-child img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
+            .number {
+                padding-left: 2rem;
+                border-left: solid 0.1rem #e0e0e0;
             }
+                .number:first-child {
+                    padding-left: 0;
+                    border: none;
+                }
+                .number p {
+                    margin-block-end: 0;
+                }
+        #progress-bar {
+            height: 1rem;
+            background-color: #fafafa;
+            border-radius: 1rem;
+            margin-block-start: 2rem;
+        }
+            #progress {
+                background-color: var(--moderate-cyan);
+                width: 89.914%;
+                height: 100%;
+                border-radius: 1rem;
+            }
+
+        #back-project-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            z-index: 3;
+        }
+            #overlay {
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+
 @media screen and (max-aspect-ratio: 1) and (max-width: 767px) {
-    #buttons button:last-child{
+    #buttons button:last-child {
        padding: 0;
+       height: 3rem;
     }
 
         #buttons button:last-child img {
@@ -56,4 +114,26 @@ section {
         #buttons button:last-child span {
             display: none;
         }
+
+    #statistic {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+        .number {
+            padding-left: 0;
+            padding-top: 2rem;
+            border-left: 0;
+            width: 40%;
+            border-top: solid 0.1rem #e0e0e0;
+            margin-block-start: 2rem;
+        }
+            .number:first-child {
+                margin-block-start: 0;
+                padding-top: 0;
+            }
+            .number h1 {
+                margin-block-start: 0;
+            }
 }
