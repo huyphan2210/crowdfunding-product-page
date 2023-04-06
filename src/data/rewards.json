@@ -1,0 +1,18 @@
+{
+    "reward": [{
+        "heading": "Bamboo Stand",
+        "pledgeNumber": 25,
+        "stockNumber": 101,
+        "description": "You get an ergonimic stand made of natural bamboo. You've helped us launch our promotional campaign, and you'll be added to a special Backer member list."
+    }, {
+        "heading": "Black Edition Stand",
+        "pledgeNumber": 75,
+        "stockNumber": 64,
+        "description": "You get a Black Special Edition computer stand and a personal thank you. You'll be added to our Backer member list. Shipping is included."
+    }, {
+        "heading": "Mahogany Special Edition",
+        "pledgeNumber": 200,
+        "stockNumber": 0,
+        "description": "You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You'll be added to our Backer member list. Shipping is included."
+    }]
+}
