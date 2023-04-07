@@ -1,0 +1,23 @@
+#thank-you {
+    display: none;
+    text-align: center;
+}
+
+    #thank-you img {
+        position: static !important;
+        transform: none !important;
+    }
+
+    #thank-you button {
+        padding: 1rem;
+        border-radius: 2rem;
+        border: none;
+        font-family: 500;
+        color: white;
+        background-color: var(--moderate-cyan);
+    }
+
+        #thank-you button:hover {
+            background-color: var(--dark-cyan);
+            font-weight: 700;
+        }
