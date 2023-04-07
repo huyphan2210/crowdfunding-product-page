@@ -2,12 +2,16 @@
     display: none;
     position: absolute;
     top: -10vh;
+    left: 50%;
+    width: calc(100% - 4rem);
+    transform: translate(-50%);
 }
 
     #modal img {
         position: absolute;
         top: 2rem;
         right: 2rem;
+        transform: translate(0, 50%);
     }
         #modal img:hover {
             cursor: pointer;
