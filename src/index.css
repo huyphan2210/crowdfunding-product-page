@@ -18,7 +18,7 @@ body {
   align-items: center;
 }
 
-button {
+button, input {
   font-family: Commissioner, sans-serif;
 }
   button:hover {
