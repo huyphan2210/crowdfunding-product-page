@@ -4,6 +4,7 @@ import rewardData from '../../data/rewards.json'
 
 import './MainContent.css';
 
+import logoMastercraft from '../../assets/images/logo-mastercraft.svg';
 import bookmark from '../../assets/images/icon-bookmark.svg';
 import bookmarked from '../../assets/images/icon-bookmarked.svg'
 
@@ -96,6 +97,7 @@ function MainContent() {
   return (
     <div id='content'>
       <section id='intro'>
+        <img id='mastercraft' src={logoMastercraft} alt='Logo Mastercraft'></img>
         <hgroup>
           <h1>Mastercraft Bamboo Monitor Riser</h1>
           <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
