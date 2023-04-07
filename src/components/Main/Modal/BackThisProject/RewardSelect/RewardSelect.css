@@ -1,5 +1,4 @@
 .reward-select {
-    position: relative;
     border: solid 0.1rem #e0e0e0;
     border-radius: 0.5rem;
     margin-block: 1rem;
@@ -14,7 +13,12 @@
                 color: black;
             }
 
+            .reward-select.disabled .select-section:hover hgroup .pledge {
+                color: var(--moderate-cyan);
+            }
+
     .select-section {
+        position: relative;
         padding: 2rem;
     }
         .select-section:hover {
@@ -53,8 +57,135 @@
             display: flex;
             align-items: center;
         }
-        .stock span {
+        .stock span, .stock-mobile span {
             font-size: 1rem;
             color: var(--dark-gray);
             margin-left: 0.5rem;
         }
+
+    .proceed {
+        border-block-start: solid 0.1rem #e0e0e0;
+        padding: 2rem;
+        justify-content: space-between;
+        align-items: center;
+        display: none;
+    }
+        .reward-select:first-child .proceed {
+            justify-content: end;
+        }
+        .proceed p {
+            margin-block: 0;
+        }
+
+        .proceed-actions  {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+            .proceed-actions::before {
+                position: absolute;
+                content: '$';
+                width: 1rem;
+                aspect-ratio: 1;
+                top: 1rem;
+                left: 1rem;
+                color: var(--dark-gray);
+                font-size: 1rem;
+            }
+
+                .proceed-actions:first-child:before {
+                    display: none;
+                }
+
+            .proceed-actions input, .proceed-actions button {
+                padding: 1rem;
+                border-radius: 2rem;
+                font-weight: 500;
+                border-style: solid;
+                font-size: 1rem;
+                border-width: 0.1rem;
+                width: 10rem;
+            }
+
+            .proceed-actions input {
+                width: 8rem;
+                padding-left: 2rem;
+                border-color: var(--moderate-cyan);
+            }
+
+                .proceed-actions input:hover {
+                    cursor: pointer;
+                }
+
+                .proceed-actions input:focus {
+                    outline-color: var(--moderate-cyan);
+                    caret-color: var(--moderate-cyan);
+                }
+
+            .proceed-actions button {
+                color: white;
+                margin-left: 1rem;
+                background-color: var(--moderate-cyan);
+                border-color: var(--moderate-cyan);
+            }
+                .proceed-actions button:hover {
+                    background-color: var(--dark-cyan);
+                    border-color: var(--dark-cyan);
+                }
+
+                .proceed-actions button:disabled {
+                    background-color: var(--dark-gray);
+                    border-color: var(--dark-gray);
+                    cursor: not-allowed;
+                }
+
+
+
+@media screen and (max-aspect-ratio: 1) {
+    .heading-section {
+        margin-left: 2.5rem;
+    }
+
+    .heading-section hgroup {
+        display: flex;
+        flex-direction: column;
+    }
+    
+        .select-section, .proceed {
+            padding: 1.5rem;
+        }
+        .pledge {
+            margin-left: 0;
+        }
+
+        .stock {
+            display: none;
+        }
+
+        .stock-mobile {
+            display: flex;
+            margin-block-end: 0;
+        }
+
+        .select-section p {
+            margin-left: 0;
+        }
+
+    .stock-mobile {
+        align-items: center;
+    }
+
+    .proceed {
+        text-align: center;
+    }
+
+        .proceed-actions button {
+            margin-left: 0;
+            width: 8rem;
+        }
+
+        .proceed-actions input {
+            width: 4rem;
+        }
+}
